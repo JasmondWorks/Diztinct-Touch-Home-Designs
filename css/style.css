@@ -499,7 +499,7 @@ header {
 }
 
 .hero__img {
-  width: clamp(230px, 30vw, 300px);
+  width: clamp(180px, 30vw, 300px);
   margin-bottom: 1em;
 }
 
