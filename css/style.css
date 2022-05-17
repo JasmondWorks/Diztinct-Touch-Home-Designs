@@ -232,8 +232,8 @@ p span.text-accent {
 }
 
 .btn--sec {
-  outline: 3px solid var(--accent-color);
-  outline-offset: -3px;
+  /* outline: 3px solid var(--accent-color); */
+  /* outline-offset: -3px; */
   color: var(--accent-color);
   border: 3px solid var(--accent-color);
 }
