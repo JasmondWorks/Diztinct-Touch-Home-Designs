@@ -628,7 +628,7 @@ header {
   align-items: center;
   margin: auto;
   position: relative;
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
 }
 
 .slide-container .slide {
@@ -1281,6 +1281,9 @@ footer li {
   }
 
   /* CAROUSEL */
+  .slide-container {
+    aspect-ratio: 16/9;
+  }
   .slide-desc-container {
     opacity: 0;
     position: absolute;
