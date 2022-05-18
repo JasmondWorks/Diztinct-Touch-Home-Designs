@@ -12,16 +12,6 @@ hamburger.addEventListener('click', () => {
     nav.classList.toggle('active')
 })
 
-document.addEventListener('mouseup', function (e) {
-    var container = document.getElementById('container');
-    if (!nav.contains(e.target) && nav.style.position === "absolute") {
-        nav.style.display = 'none';
-        console.log('True');
-    } else {
-        console.log('False');
-    }
-});
-
 
 
 

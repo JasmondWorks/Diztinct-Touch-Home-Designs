@@ -1,36 +1,59 @@
-var gallery = document.querySelector("#gallery");
-var getVal = function (elem, style) {
-  return parseInt(window.getComputedStyle(elem).getPropertyValue(style));
-};
-var getHeight = function (item) {
-  return item.querySelector(".content").getBoundingClientRect().height;
-};
-var resizeAll = function () {
-  var altura = getVal(gallery, "grid-auto-rows");
-  var gap = getVal(gallery, "grid-row-gap");
-  gallery.querySelectorAll(".gallery-item").forEach(function (item) {
-    var el = item;
-    el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
-  });
-};
-gallery.querySelectorAll("img").forEach(function (item) {
-  item.classList.add("byebye");
-  if (item.complete) {
-    console.log(item.src);
-  } else {
-    item.addEventListener("load", function () {
-      var altura = getVal(gallery, "grid-auto-rows");
-      var gap = getVal(gallery, "grid-row-gap");
-      var gitem = item.parentElement.parentElement;
-      gitem.style.gridRowEnd =
-        "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
-      item.classList.remove("byebye");
+// TODO: touch events
+
+const imgContainers = document.querySelectorAll('.img-container');
+const body = document.body;
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+checkprevBtn = () => document.querySelector('div:first-child').classList.contains('show') ? prevBtn.style.display = 'none' : prevBtn.style.display = 'flex';
+
+checknextBtn = () => document.querySelector('div:last-child').classList.contains('show') ? nextBtn.style.display = 'none' : nextBtn.style.display = 'flex';
+
+Array.prototype.slice.call(imgContainers).forEach(function (el) {
+    el.addEventListener('click', function () {
+        this.classList.toggle('show');
+        body.classList.toggle('active');
+        checknextBtn();
+        checkprevBtn();
     });
-  }
 });
-window.addEventListener("resize", resizeAll);
-gallery.querySelectorAll(".gallery-item").forEach(function (item) {
-  item.addEventListener("click", function () {
-    item.classList.toggle("full");
-  });
+
+prevBtn.addEventListener('click', function (e) {
+    const show = document.querySelector('.show');
+    const event = document.createEvent('HTMLEvents');
+    event.initEvent('click', true, false);
+    // show.previousElementSibling.dispatchEvent(event);
+    // console.log(e.currentTarget);
+    if (imgContainers[0].classList.contains('show')) {
+        const imgContainersLastchild = imgContainers[imgContainers.length - 1]
+        show.imgContainersLastchild.dispatchEvent(event)
+        console.log('true');
+    } else {
+        show.previousElementSibling.dispatchEvent(event);
+    }
+    // if (previousElementSibling == "") {
+    //     previousElementSibling = imgContainers[imgContainers.length - 1]
+    // }
+    show.classList.remove('show');
+    body.classList.toggle('active');
+    checknextBtn();
 });
+
+nextBtn.addEventListener('click', function () {
+    const show = document.querySelector('.show');
+    const event = document.createEvent('HTMLEvents');
+    event.initEvent('click', true, false);
+
+    show.nextElementSibling.dispatchEvent(event);
+    show.classList.remove('show');
+    body.classList.toggle('active');
+    checkprevBtn();
+});
+
+
+// const gridShape = ['vertical', 'big', 'horizontal', 'img-container']
+// for (i = 0; i < imgContainers.length; i++) {
+//     let randomNum = Math.floor(Math.random() * gridShape.length)
+//     imgContainers[i].classList.add(gridShape[randomNum])
+//     // console.log(imgContainers[count].classList);
+// } 
