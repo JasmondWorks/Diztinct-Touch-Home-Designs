@@ -307,6 +307,7 @@ header {
   background-size: cover;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* NAV */
@@ -314,7 +315,10 @@ header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  position: relative;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  top: 30px;
 }
 .nav-container > div {
   display: flex;
