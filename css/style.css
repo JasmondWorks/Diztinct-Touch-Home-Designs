@@ -121,7 +121,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  line-height: 1.85;
+  line-height: 1.7;
   letter-spacing: 1.4px;
   font-family: "Montserrat", sans-serif;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -686,7 +686,9 @@ header {
   border-radius: 5px 5px 0 0;
 }
 .slide-desc p:after {
-  content: "- Designed by Diztinct Touch";
+  content: "- By Diztinct Touch";
+  color: var(--dark-grey);
+  font-weight: 600;
   display: block;
   text-align: right;
   margin-top: 1em;
