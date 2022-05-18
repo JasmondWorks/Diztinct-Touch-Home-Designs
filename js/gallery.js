@@ -60,9 +60,8 @@ prevBtn.addEventListener('click', () => prevImage());
 nextBtn.addEventListener('click', () => nextImage());
 
 
-// const gridShape = ['vertical', 'big', 'horizontal', 'img-container']
-// for (i = 0; i < imgContainers.length; i++) {
-//     let randomNum = Math.floor(Math.random() * gridShape.length)
-//     imgContainers[i].classList.add(gridShape[randomNum])
-//     // console.log(imgContainers[count].classList);
-// } 
+const gridShape = ['vertical', 'big', 'horizontal', 'img-container']
+for (i = 0; i < imgContainers.length; i++) {
+    let randomNum = Math.floor(Math.random() * gridShape.length)
+    imgContainers[i].classList.add(gridShape[randomNum])
+} 
