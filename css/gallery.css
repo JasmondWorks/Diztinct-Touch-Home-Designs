@@ -2,11 +2,6 @@
 	TODO: fix responsive view on small devices
 */
 
-/* * {
-  margin: 0;
-  padding: 0;
-} */
-
 .prev,
 .next {
   position: fixed;
@@ -99,10 +94,10 @@
   align-self: center;
   object-fit: contain;
   z-index: 666;
-  width: calc(100% - 60px);
+  max-width: calc(100% - 60px);
   height: calc(100% - 60px);
   filter: drop-shadow(0 3px 15px black);
-  cursor: url(/images/close.png), grab; /* custom cursor to signal close on click */
+  cursor: url("/images/Icons/close-icon-red.svg"), grab; /* custom cursor to signal close on click */
 }
 
 .img-container:not(.show):hover img {

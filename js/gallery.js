@@ -5,20 +5,7 @@ const body = document.body;
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
-checkprevBtn = () => document.querySelector('div:first-child').classList.contains('show') ? prevBtn.style.display = 'none' : prevBtn.style.display = 'flex';
-
-checknextBtn = () => document.querySelector('div:last-child').classList.contains('show') ? nextBtn.style.display = 'none' : nextBtn.style.display = 'flex';
-
-Array.prototype.slice.call(imgContainers).forEach(function (el) {
-    el.addEventListener('click', function () {
-        this.classList.toggle('show');
-        body.classList.toggle('active');
-        checknextBtn();
-        checkprevBtn();
-    });
-});
-
-prevBtn.addEventListener('click', function (e) {
+function prevImage() {
     const show = document.querySelector('.show');
     const event = document.createEvent('HTMLEvents');
     event.initEvent('click', true, false);
@@ -37,9 +24,9 @@ prevBtn.addEventListener('click', function (e) {
     show.classList.remove('show');
     body.classList.toggle('active');
     checknextBtn();
-});
+}
 
-nextBtn.addEventListener('click', function () {
+function nextImage() {
     const show = document.querySelector('.show');
     const event = document.createEvent('HTMLEvents');
     event.initEvent('click', true, false);
@@ -48,7 +35,29 @@ nextBtn.addEventListener('click', function () {
     show.classList.remove('show');
     body.classList.toggle('active');
     checkprevBtn();
+}
+
+checkprevBtn = () => document.querySelector('div:first-child').classList.contains('show') ? prevBtn.style.display = 'none' : prevBtn.style.display = 'flex';
+
+checknextBtn = () => document.querySelector('div:last-child').classList.contains('show') ? nextBtn.style.display = 'none' : nextBtn.style.display = 'flex';
+
+Array.prototype.slice.call(imgContainers).forEach(function (el) {
+    el.addEventListener('click', function () {
+        this.classList.toggle('show');
+        body.classList.toggle('active');
+        checknextBtn();
+        checkprevBtn();
+    });
 });
+
+// document.addEventListener('keypress', (e) => {
+//     // console.log(e.key);
+//     switch ()
+// })
+
+prevBtn.addEventListener('click', () => prevImage());
+
+nextBtn.addEventListener('click', () => nextImage());
 
 
 // const gridShape = ['vertical', 'big', 'horizontal', 'img-container']
