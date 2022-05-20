@@ -220,11 +220,16 @@ p span.text-accent {
   padding-inline: clamp(0.3em, 10vw, 0.8em);
   border-radius: 100px;
   font-weight: bold;
-  transition: all 0.35s ease;
+  transition: background 0.35s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   width: fit-content;
+}
+
+.btn:active {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 .btn--pry {
@@ -233,8 +238,6 @@ p span.text-accent {
 }
 
 .btn--sec {
-  /* outline: 3px solid var(--accent-color); */
-  /* outline-offset: -3px; */
   color: var(--accent-color);
   border: 3px solid var(--accent-color);
 }
@@ -337,8 +340,11 @@ header {
   background-color: var(--light-grey);
   max-width: 200px;
   min-width: 170px;
+  pointer-events: none;
 }
 
+.nav .nav__list,
+.nav .nav__item,
 .nav .nav__link {
   pointer-events: none;
 }
@@ -348,6 +354,8 @@ header {
   transform: translateX(0);
 }
 
+.nav.active .nav__list,
+.nav.active .nav__item,
 .nav.active .nav__link {
   pointer-events: all;
 }
@@ -466,6 +474,7 @@ header {
   background-color: black;
   transition: background 0.5s ease;
   transform-origin: right;
+  pointer-events: none;
 }
 
 .hamburger__line--1,
@@ -642,7 +651,7 @@ header {
 @keyframes fadeAndZoom {
   0% {
     transform: scale(1);
-    opacity: 0.75;
+    opacity: 0.35;
   }
   2% {
     transform: scale(1.015);
@@ -664,8 +673,6 @@ header {
 }
 
 .slide-container .slide img {
-  animation: fadeAndZoom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: fadeAndZoom 15s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: fadeAndZoom 9.5s ease-out both;
   width: 100%;
   height: 100%;
@@ -976,10 +983,10 @@ header {
   border-left: 1px solid #ccc;
 }
 
-.footer__social-icon:active::after {
+.footer__social-icon:active::after,
+.footer__social-icon:active {
   background-color: #bbb;
 }
-
 .footer__social-icon:after {
   content: "";
   width: 150%;
@@ -1139,7 +1146,8 @@ footer li {
   transform: translate(-50%, -50%);
 }
 
-.contact__social-icon:active::after {
+.contact__social-icon:active::after,
+.contact__social-icon:active {
   background-color: #bbb;
 }
 
