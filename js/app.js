@@ -14,7 +14,6 @@ document.addEventListener('click', (e) => {
     if (window.innerWidth <= 768) {
         if (!e.target.classList.contains('nav') && !e.target.classList.contains('nav__list') && !e.target.classList.contains('nav__item') && !e.target.classList.contains('nav__link') && !e.target.classList.contains('hamburger__background') && !e.target.classList.contains('hamburger')) {
             nav.classList.remove('active')
-            console.log(e.target);
         } else if (e.target.classList.contains('hamburger__background') && nav.classList.contains('active')) {
             nav.classList.remove('active')
         } else {
@@ -24,9 +23,7 @@ document.addEventListener('click', (e) => {
     }
 })
 
-// hamburger.addEventListener('click', () => {
-//     nav.classList.toggle('active')
-// })
+
 
 
 
