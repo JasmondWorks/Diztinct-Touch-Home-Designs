@@ -565,7 +565,8 @@ header {
 
 .hero__img {
   width: clamp(180px, 30vw, 300px);
-  margin-block: 1.5em;
+  margin-top: 5em;
+  margin-bottom: 1em;
 }
 
 .hero__text {
@@ -1430,7 +1431,6 @@ footer li {
   }
 
   .hero__img {
-    margin-block: 0;
     margin-left: 1em;
   }
 
