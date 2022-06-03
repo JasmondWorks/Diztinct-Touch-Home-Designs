@@ -316,7 +316,7 @@ p span.text-accent {
 /* HEADER */
 header {
   padding-block: clamp(2.5em, 3.5vw, 2.7em);
-  height: 100vh;
+  /* height: 100vh; */
   background: url("/images/hero-section-background.svg") no-repeat bottom;
   background-size: cover;
   display: flex;
