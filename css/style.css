@@ -1299,7 +1299,7 @@ footer li {
 /* RESPONSIVE RULES */
 @media (max-width: 425px) {
   .hero__img {
-    min-width: 120px;
+    min-width: 165px;
   }
 
   .card__desc {
