@@ -1238,7 +1238,7 @@ footer li {
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: clamp(.75em, 3vw, 1.5em);
+  padding: clamp(1em, 3vw, 1.75em);
   margin: 0;
   z-index: 2;
   overflow: hidden;
