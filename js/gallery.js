@@ -1,15 +1,35 @@
 // TODO: touch events
 
-const imgContainers = document.querySelectorAll('.img-container');
+const imgsWrappers = document.querySelectorAll('.gallery__img-wrapper');
 const body = document.body;
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
-checkPrevBtn = () => document.querySelector('.img-container:first-child').classList.contains('show') ? prevBtn.style.display = 'none' : prevBtn.style.display = 'flex';
+function prevImage() {
+    const show = document.querySelector('.show');
+    const event = document.createEvent('HTMLEvents');
+    event.initEvent('click', true, false);
+    show.previousElementSibling.dispatchEvent(event);
+    show.classList.remove('show');
+    body.classList.toggle('active');
+    checkNextBtn();
+}
 
-checkNextBtn = () => document.querySelector('.img-container:last-child').classList.contains('show') ? nextBtn.style.display = 'none' : nextBtn.style.display = 'flex';
+function nextImage() {
+    const show = document.querySelector('.show');
+    const event = document.createEvent('HTMLEvents');
+    event.initEvent('click', true, false);
+    show.nextElementSibling.dispatchEvent(event);
+    show.classList.remove('show');
+    body.classList.toggle('active');
+    checkPrevBtn();
+}
 
-Array.prototype.slice.call(imgContainers).forEach(function (el) {
+checkPrevBtn = () => document.querySelector('.gallery__img-wrapper:first-child').classList.contains('show') ? prevBtn.style.display = 'none' : prevBtn.style.display = 'flex';
+
+checkNextBtn = () => document.querySelector('.gallery__img-wrapper:last-child').classList.contains('show') ? nextBtn.style.display = 'none' : nextBtn.style.display = 'flex';
+
+Array.prototype.slice.call(imgsWrappers).forEach(function (el) {
     el.addEventListener('click', function () {
         this.classList.toggle('show');
         body.classList.toggle('active');
@@ -18,15 +38,6 @@ Array.prototype.slice.call(imgContainers).forEach(function (el) {
     });
 });
 
-
 prevBtn.addEventListener('click', () => prevImage());
 
 nextBtn.addEventListener('click', () => nextImage());
-
-
-const gridShape = ['vertical', 'big', 'horizontal', 'img-container']
-for (i = 0; i < imgContainers.length; i++) {
-    let randomNum = Math.floor(Math.random() * gridShape.length)
-    imgContainers[i].classList.add(gridShape[randomNum])
-}
-
