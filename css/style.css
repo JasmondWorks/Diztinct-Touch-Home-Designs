@@ -316,7 +316,6 @@ p span.text-accent {
 /* HEADER */
 header {
   padding-block: clamp(2.5em, 3.5vw, 2.7em);
-  /* height: 100vh; */
   background: url("/images/hero-section-background.svg") no-repeat bottom;
   background-size: cover;
   display: flex;
@@ -561,12 +560,11 @@ header {
 .hero {
   text-align: center;
   margin: auto;
-  padding-block: 2.5em;
+  padding-block: 3em;
 }
 
 .hero__img {
   width: clamp(180px, 30vw, 300px);
-  margin-top: 2em;
   margin-bottom: 1em;
 }
 
@@ -1423,6 +1421,7 @@ footer li {
 
   /* HERO */
   .hero {
+    padding-block: 3.5em;
     flex-direction: row-reverse;
     align-items: center;
   }
