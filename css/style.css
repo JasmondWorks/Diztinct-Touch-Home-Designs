@@ -1421,7 +1421,7 @@ footer li {
 
   /* HERO */
   .hero {
-    padding-block: 3.5em;
+    padding-block: 15vh;
     flex-direction: row-reverse;
     align-items: center;
   }
