@@ -12,11 +12,25 @@ const nav = document.querySelector('.nav')
 
 
 document.addEventListener('click', (e) => {
+    // if (window.innerWidth <= 768) {
+    //     if (!e.target.classList.contains('nav') && !e.target.classList.contains('nav__list') && !e.target.classList.contains('nav__item') && !e.target.classList.contains('nav__link') && !e.target.classList.contains('hamburger__background') && !e.target.classList.contains('hamburger') && !e.target.classList.contains('hamburger__line')) {
+    //         nav.classList.remove('active')
+    //         hamburgerLines.forEach(hamburgerLine => hamburgerLine.classList.remove('active'));
+    //     } else if (e.target.classList.contains('hamburger__background') && nav.classList.contains('active')) {
+    //         nav.classList.remove('active')
+    //         hamburgerLines.forEach(hamburgerLine => hamburgerLine.classList.remove('active'));
+    //     } else {
+    //         nav.style.display = 'block'
+    //         nav.classList.add('active')
+    //         hamburgerLines.forEach(hamburgerLine => hamburgerLine.classList.add('active'));
+    //     }
+    // }
+
     if (window.innerWidth <= 768) {
-        if (!e.target.classList.contains('nav') && !e.target.classList.contains('nav__list') && !e.target.classList.contains('nav__item') && !e.target.classList.contains('nav__link') && !e.target.classList.contains('hamburger__background') && !e.target.classList.contains('hamburger') && !e.target.classList.contains('hamburger__line')) {
+        if (!e.target.classList.contains('nav') && !e.target.classList.contains('nav__list') && !e.target.classList.contains('nav__item') && !e.target.classList.contains('nav__link') && !e.target.classList.contains('hamburger') && !e.target.classList.contains('hamburger__line')) {
             nav.classList.remove('active')
             hamburgerLines.forEach(hamburgerLine => hamburgerLine.classList.remove('active'));
-        } else if (e.target.classList.contains('hamburger__background') && nav.classList.contains('active')) {
+        } else if (nav.classList.contains('active')) {
             nav.classList.remove('active')
             hamburgerLines.forEach(hamburgerLine => hamburgerLine.classList.remove('active'));
         } else {
@@ -115,13 +129,3 @@ testPersons.forEach((person, i) => {
         testCurrentSlide = i
     })
 })
-
-
-
-
-
-
-
-
-
-

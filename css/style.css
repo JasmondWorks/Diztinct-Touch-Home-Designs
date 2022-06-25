@@ -502,7 +502,7 @@ header {
 }
 
 .hamburger__background {
-  width: 37px;
+  /* width: 37px;
   height: 37px;
   opacity: 0;
   position: absolute;
@@ -522,7 +522,7 @@ header {
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%); */
 }
 
 .hamburger__background.active {
@@ -532,9 +532,9 @@ header {
 .hamburger__line {
   position: relative;
   z-index: 1;
-  width: 27px;
+  width: 23px;
   border-radius: 100px;
-  height: 3px;
+  height: 2px;
   background-color: black;
   transform-origin: right;
   pointer-events: none;
@@ -555,31 +555,39 @@ header {
 }
 
 .hamburger__line--2 {
-  transition: opacity 0.35s ease;
-  -webkit-transition: opacity 0.35s ease;
-  -moz-transition: opacity 0.35s ease;
-  -ms-transition: opacity 0.35s ease;
-  -o-transition: opacity 0.35s ease;
+  transition: transform 0.35s ease;
+  -webkit-transition: transform 0.35s ease;
+  -moz-transition: transform 0.35s ease;
+  -ms-transition: transform 0.35s ease;
+  -o-transition: transform 0.35s ease;
 }
 
 .hamburger__line--1.active {
-  transform: rotate(-37deg);
-  -webkit-transform: rotate(-37deg);
-  -moz-transform: rotate(-37deg);
-  -ms-transform: rotate(-37deg);
-  -o-transform: rotate(-37deg);
+  transform: rotate(-35deg);
+  -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
 }
 
 .hamburger__line--2.active {
-  opacity: 0;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
 }
 
 .hamburger__line--3.active {
-  transform: rotate(37deg);
+  transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
 }
 
 .hamburger__line+.hamburger__line {
-  margin-top: 5px;
+  margin-top: 4.5px;
 }
 
 /* HERO */
