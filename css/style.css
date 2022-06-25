@@ -355,7 +355,6 @@ header {
 }
 
 .nav {
-  margin-top: auto;
   border: 1px solid #ccc;
   position: absolute;
   width: clamp(10em, 55%, 20em);
@@ -365,7 +364,8 @@ header {
   max-width: 200px;
   min-width: 170px;
   pointer-events: none;
-  --translateY: 45px;
+  top: 0;
+  --translateY: 32px;
   transform: translate(50px, var(--translateY));
   -webkit-transform: translate(50px, var(--translateY));
   -moz-transform: translate(50px, var(--translateY));
@@ -413,7 +413,7 @@ header {
 }
 
 .nav__item {
-  padding: 0.8em;
+  padding: 1.2em;
   margin-inline: auto;
 }
 
@@ -439,7 +439,7 @@ header {
   right: 0;
   bottom: -5px;
   height: 2px;
-  width: 20px;
+  width: 15px;
   background-color: var(--accent-color);
   transform: translateX(70%);
   opacity: 0;
@@ -489,8 +489,11 @@ header {
 .hamburger:hover .hamburger__background,
 .hamburger:focus .hamburger__background {
   opacity: 1;
-  width: 45px;
-  height: 45px;
+  transform: translate(-50%, -50%) scale(1.1);
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+  -moz-transform: translate(-50%, -50%) scale(1.1);
+  -ms-transform: translate(-50%, -50%) scale(1.1);
+  -o-transform: translate(-50%, -50%) scale(1.1);
 }
 
 .hamburger:hover .hamburger__line,
@@ -499,20 +502,27 @@ header {
 }
 
 .hamburger__background {
+  width: 37px;
+  height: 37px;
   opacity: 0;
-  width: 0;
-  height: 0;
   position: absolute;
+  inset: 0;
   background-color: #ccc;
   z-index: 0;
   border-radius: 100px;
-  top: 50%;
-  transform: translateY(-50%);
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 .hamburger__background.active {
@@ -554,6 +564,10 @@ header {
 
 .hamburger__line--1.active {
   transform: rotate(-37deg);
+  -webkit-transform: rotate(-37deg);
+  -moz-transform: rotate(-37deg);
+  -ms-transform: rotate(-37deg);
+  -o-transform: rotate(-37deg);
 }
 
 .hamburger__line--2.active {
