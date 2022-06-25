@@ -365,7 +365,7 @@ header {
   min-width: 170px;
   pointer-events: none;
   top: 0;
-  --translateY: 32px;
+  --translateY: 25px;
   transform: translate(50px, var(--translateY));
   -webkit-transform: translate(50px, var(--translateY));
   -moz-transform: translate(50px, var(--translateY));
