@@ -799,6 +799,7 @@ header {
   display: block;
   margin-top: 1em;
   width: fit-content;
+  font-weight: 600;
 }
 
 /* TESTIMONIALS */
@@ -1169,7 +1170,7 @@ header {
 footer p,
 footer li {
   margin-block: 0.75em;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* CONTACT US PAGE */
