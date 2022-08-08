@@ -261,13 +261,13 @@ p span.text-accent {
 }
 
 .btn--sec:hover,
-.btn--sec:focus {
+.btn--sec:focus-visible {
   background-color: var(--accent-color);
   color: white;
 }
 
 .btn--pry:hover,
-.btn--sec:focus {
+.btn--sec:focus-visible {
   --accent-color: hsl(0, 80%, 27%);
 }
 
@@ -452,7 +452,7 @@ header {
 
 .nav__link.active::after,
 .nav__link:hover::after,
-.nav__link:focus::after {
+.nav__link:focus-visible::after {
   opacity: 1;
   transform: translateX(0);
 }
@@ -487,7 +487,7 @@ header {
 }
 
 .hamburger:hover .hamburger__background,
-.hamburger:focus .hamburger__background {
+.hamburger:focus-visible .hamburger__background {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.1);
   -webkit-transform: translate(-50%, -50%) scale(1.1);
@@ -497,7 +497,7 @@ header {
 }
 
 .hamburger:hover .hamburger__line,
-.hamburger:focus .hamburger__line {
+.hamburger:focus-visible .hamburger__line {
   background-color: var(--dark-grey);
 }
 
@@ -693,8 +693,8 @@ header {
 
 .recent-works .card .prev:hover,
 .recent-works .card .next:hover,
-.recent-works .card .prev:focus,
-.recent-works .card .next:focus {
+.recent-works .card .prev:focus-visible,
+.recent-works .card .next:focus-visible {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
@@ -863,7 +863,7 @@ header {
 }
 
 .testimonials__person:hover,
-.testimonials__person:focus {
+.testimonials__person:focus-visible {
   cursor: pointer;
 }
 
@@ -874,7 +874,7 @@ header {
 }
 
 .testimonials__person.active:hover,
-.testimonials__person.active:focus {
+.testimonials__person.active:focus-visible {
   cursor: default;
 }
 
@@ -892,7 +892,7 @@ header {
 }
 
 .testimonials__person:hover::after,
-.testimonials__person:focus::after {
+.testimonials__person:focus-visible::after {
   box-shadow: var(--box-shadow-large);
   animation: pop 1.2s cubic-bezier(0.1, 0.66, 0.37, 0.99);
 }
@@ -1017,7 +1017,7 @@ header {
 }
 
 #copyright:hover,
-#copyright:focus {
+#copyright:focus-visible {
   text-decoration: underline;
 }
 
@@ -1142,7 +1142,7 @@ header {
 }
 
 .footer__social-icon:hover:after,
-.footer__social-icon:focus::after {
+.footer__social-icon:focus-visible::after {
   transition: transform 0.5s ease-out;
   -webkit-transition: transform 0.5s ease-out;
   -moz-transition: transform 0.5s ease-out;
@@ -1185,7 +1185,7 @@ header {
 }
 
 .footer__nav__link:hover,
-.footer__nav__link:focus {
+.footer__nav__link:focus-visible {
   color: var(--accent-color);
 }
 
@@ -1304,7 +1304,7 @@ footer li {
 }
 
 .contact__social-icon:hover:after,
-.contact__social-icon:focus:after {
+.contact__social-icon:focus-visible:after {
   transition: transform 0.5s ease-out;
   -webkit-transition: transform 0.5s ease-out;
   -moz-transition: transform 0.5s ease-out;
